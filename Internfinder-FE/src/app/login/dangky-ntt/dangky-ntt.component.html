@@ -1,0 +1,89 @@
+<div class="login-right">
+  <div class="container">
+    <h3><strong>Đăng Ký Nhà Tuyển Dụng</strong></h3>
+    <div class="login-top">
+      <!--				<ul class="login-icons">-->
+      <!--					<li><a href="#" ><i class="facebook"> </i><span>Facebook</span></a></li>-->
+      <!--					<li><a href="#" class="go"><i class="google"></i><span>Google +</span></a></li>-->
+      <!--					<div class="clearfix"> </div>-->
+      <!--				</ul>-->
+      <div class="form-info">
+        <form [formGroup]="formRegCompany" (ngSubmit)="onSubmit()">
+          <input formControlName="username" type="text"   placeholder="Tên Đăng Nhập"  >
+          <div *ngFor="let validation of validation_messages.username">
+            <small class="text-danger"
+                   *ngIf="formRegCompany.get('username')!.hasError(validation.type) && formRegCompany.get('username')!.touched">
+              {{validation.message}}</small>
+          </div>
+          <input formControlName="password" type="password"  placeholder="Mật Khẩu " >
+          <div *ngFor="let validation of validation_messages.password">
+            <small class="text-danger"
+                   *ngIf="formRegCompany.get('password')!.hasError(validation.type) && formRegCompany.get('password')!.touched">
+              {{validation.message}}</small>
+          </div>
+          <input formControlName="re_password" type="password"  placeholder=" Nhập lại mật khẩu " >
+          <div *ngFor="let validation of validation_messages.re_password">
+            <small class="text-danger"
+                   *ngIf="formRegCompany.get('re_password')!.hasError(validation.type) && formRegCompany.get('re_password')!.touched">
+              {{validation.message}}</small>
+          </div>
+          <label style="margin-bottom: 10px;">Thông Tin Công Ty</label>
+
+          <input formControlName="name_company" type="text"  placeholder="Tên Công Ty ">
+          <div *ngFor="let validation of validation_messages.name_company">
+            <small class="text-danger"
+                   *ngIf="formRegCompany.get('name_company')!.hasError(validation.type) && formRegCompany.get('name_company')!.touched">
+              {{validation.message}}</small>
+          </div>
+          <input formControlName="address_company" type="text"  placeholder="Địa Chỉ Công Ty " >
+          <div *ngFor="let validation of validation_messages.address_company">
+            <small class="text-danger"
+                   *ngIf="formRegCompany.get('address_company')!.hasError(validation.type) && formRegCompany.get('address_company')!.touched">
+              {{validation.message}}</small>
+          </div>
+          <input formControlName="tax" type="text"  placeholder="Mã Số Thuế " >
+          <div *ngFor="let validation of validation_messages.tax">
+            <small class="text-danger"
+                   *ngIf="formRegCompany.get('tax')!.hasError(validation.type) && formRegCompany.get('tax')!.touched">
+              {{validation.message}}</small>
+          </div>
+          <input formControlName="website" type="text"  placeholder="Website " >
+          <div *ngFor="let validation of validation_messages.website">
+            <small class="text-danger"
+                   *ngIf="formRegCompany.get('website')!.hasError(validation.type) && formRegCompany.get('website')!.touched">
+              {{validation.message}}</small>
+          </div>
+          <input formControlName="phone" type="text"  placeholder="Số Điện thoại" >
+          <div *ngFor="let validation of validation_messages.username">
+            <small class="text-danger"
+                   *ngIf="formRegCompany.get('phone')!.hasError(validation.type) && formRegCompany.get('phone')!.touched">
+              {{validation.message}}</small>
+          </div>
+          <input formControlName="contact" type="text"   placeholder="Tên người liên hệ">
+          <div *ngFor="let validation of validation_messages.username">
+            <small class="text-danger"
+                   *ngIf="formRegCompany.get('contact')!.hasError(validation.type) && formRegCompany.get('contact')!.touched">
+              {{validation.message}}</small>
+          </div>
+          <input formControlName="email" type="text"   placeholder="Email liên hệ" >
+          <div *ngFor="let validation of validation_messages.email">
+            <small class="text-danger"
+                   *ngIf="formRegCompany.get('email')!.hasError(validation.type) && formRegCompany.get('email')!.touched">
+              {{validation.message}}</small>
+          </div>
+
+
+          <!--						<div class="custom-control custom-checkbox" style="margin-bottom: 10px;">-->
+          <!--							<input type="checkbox" class="custom-control-input" id="customCheck1">-->
+          <!--							<label class="custom-control-label" for="customCheck1">Tôi đồng ý với điều khoản và dịch vụ</label>-->
+          <!--						</div>-->
+          <label class="hvr-sweep-to-right">
+            <input type="submit" value="Sign Up">
+          </label>
+        </form>
+        <p>Bạn đã có tài khoản? <a href="dangnhap/client">Đăng nhập</a></p>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="login-right">
+  <div class="container">
+    <h3><strong>Đăng Ký Tài Khoản Sinh Viên</strong></h3>
+    <div class="login-top">
+      <div class="form-info">
+        <form [formGroup]="formRegStudent" (ngSubmit)="onSubmit()">
+          <input formControlName="username"  type="text"   placeholder="Tên Đăng Nhập"  >
+          <div *ngFor="let validation of validation_messages.username">
+            <small class="text-danger"
+                   *ngIf="formRegStudent.get('username')!.hasError(validation.type) && formRegStudent.get('username')!.touched">
+              {{validation.message}}</small>
+          </div>
+          <input formControlName="email" type="text"   placeholder="Địa Chỉ Email"  >
+          <div *ngFor="let validation of validation_messages.email">
+            <small class="text-danger"
+                   *ngIf="formRegStudent.get('email')!.hasError(validation.type) && formRegStudent.get('email')!.touched">
+              {{validation.message}}</small>
+          </div>
+          <input formControlName="address" type="text"  placeholder="Địa Chỉ ">
+          <div *ngFor="let validation of validation_messages.address">
+            <small class="text-danger"
+                   *ngIf="formRegStudent.get('address')!.hasError(validation.type) && formRegStudent.get('address')!.touched">
+              {{validation.message}}</small>
+          </div>
+          <input formControlName="phone" type="text"  placeholder="Số Điện thoại">
+          <div *ngFor="let validation of validation_messages.phone">
+            <small class="text-danger"
+                   *ngIf="formRegStudent.get('phone')!.hasError(validation.type) && formRegStudent.get('phone')!.touched">
+              {{validation.message}}</small>
+          </div>
+          <input formControlName="password" type="password"  placeholder="Mật khẩu ">
+          <div *ngFor="let validation of validation_messages.password">
+            <small class="text-danger"
+                   *ngIf="formRegStudent.get('password')!.hasError(validation.type) && formRegStudent.get('password')!.touched">
+              {{validation.message}}</small>
+          </div>
+          <input formControlName="re_password" type="password"  placeholder="Mật lại khẩu ">
+          <div *ngFor="let validation of validation_messages.re_password">
+            <small class="text-danger"
+                   *ngIf="formRegStudent.get('re_password')!.hasError(validation.type) && formRegStudent.get('re_password')!.touched">
+              {{validation.message}}</small>
+          </div>
+          <div class="custom-control custom-checkbox">
+        </div>
+          <label class="hvr-sweep-to-right">
+            <input type="submit" value="Đăng ký">
+          </label>
+        </form>
+        <p>Bạn đã có tài khoản? <a href="dangnhap/client">Đăng nhập</a></p>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="login-right">
+  <div class="container">
+    <h3><strong>ADMIN</strong></h3>
+    <div class="login-top">
+      <div class="form-info">
+        <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+          <input formControlName="username" type="text" class="text" placeholder="Tên Đăng Nhập" >
+          <input formControlName="password" type="password"  placeholder="Mật Khẩu" >
+          <div>
+
+          </div>
+          <div class="custom-control custom-checkbox" style="margin-bottom: 10px;">
+            <input formControlName="remember_me" type="checkbox" class="custom-control-input" id="customCheck1">
+            <label class="custom-control-label" for="customCheck1" style="margin-left: 10px;">Lưu tài khoản</label>
+          </div>
+          <label class="hvr-sweep-to-right">
+            <input type="submit" value="Đăng nhập">
+          </label>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

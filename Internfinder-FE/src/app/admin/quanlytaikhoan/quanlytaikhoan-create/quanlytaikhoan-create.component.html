@@ -1,0 +1,125 @@
+<div class="d-flex flex-column" >
+  <div id="content">
+
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" id="contactForm"  class="form-horizontal" role="form">
+      <h2>Thêm Tài Khoản</h2>
+      <div class="form-group">
+        <label for="userName" class="col-sm-3 control-label">Tên Đăng Nhập</label>
+        <div class="col-sm-9">
+          <input formControlName="userName" [(ngModel)]="account.userName" name="userName" type="text" id="userName" placeholder="Tên Đăng Nhập" class="form-control" autofocus>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="passWord" class="col-sm-3 control-label">Mật Khẩu</label>
+        <div class="col-sm-9">
+          <input formControlName="passWord" [(ngModel)]="account.passWord" name="passWord" type="password" id="passWord" placeholder="Mật khẩu" class="form-control">
+<!--          <div *ngIf="!contactForm.controls.passWord?.valid && (contactForm.controls.passWord?.dirty) || contactForm.controls.passWord?.touched" >-->
+<!--            <span style="color:red">Vui Lòng nhập Tên Mật khẩu</span>-->
+<!--          </div>-->
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="createDate" class="col-sm-3 control-label">Ngày Tạo</label>
+        <div class="col-sm-9">
+          <input formControlName="createDate" name="createDate" [(ngModel)]="account.createDate" type="date" id="createDate" placeholder="Ngày Tạo" class="form-control">
+
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="roleID" class="col-sm-3 control-label">Cấp Quyền</label>
+        <div class="col-sm-9">
+        <select class="form-select" aria-label="Default select example" [(ngModel)]="account.roleID" formControlName="roleID" name="roleID" type="text" id="roleID">
+          <option value=admin>Admin</option>
+          <option value=ntd>Nhà Tuyển Dụng</option>
+          <option value=sv>Sinh Viên</option>
+        </select>
+<!--          <div *ngIf="!contactForm.controls.roleID?.valid && (contactForm.controls.roleID?.dirty) || contactForm.controls.roleID?.touched" >-->
+<!--            <span style="color:red">Vui Lòng Chọn Nhóm Role</span>-->
+<!--          </div>-->
+        </div>
+<!--          <input formControlName="roleID" name="roleID" type="text" id="roleID" placeholder="Role ID" class="form-control">-->
+      </div>
+      <div class="form-group">
+        <label for="fullName" class="col-sm-3 control-label">Họ Và Tên</label>
+        <div class="col-sm-9">
+          <input formControlName="fullName" name="fullName" [(ngModel)]="account.fullName" type="text" id="fullName" placeholder="Họ Và Tên" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="brithday" class="col-sm-3 control-label">Sinh Nhật</label>
+        <div class="col-sm-9">
+          <input formControlName="brithday" name="brithday" [(ngModel)]="account.brithday" type="date" id="brithday" placeholder="Sinh Nhật" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="address" class="col-sm-3 control-label">Địa chỉ</label>
+        <div class="col-sm-9">
+          <input formControlName="address" name="address" [(ngModel)]="account.address" type="text" id="address" placeholder="Địa chỉ" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email" class="col-sm-3 control-label">Email</label>
+        <div class="col-sm-9">
+          <input formControlName="email" name="email" [(ngModel)]="account.email" type="text" id="email" placeholder="Email" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="companyName" class="col-sm-3 control-label">Nơi Làm Việc</label>
+        <div class="col-sm-9">
+          <input formControlName="companyName" name="companyName" [(ngModel)]="account.compyName" type="text" id="companyName" placeholder="Nơi Làm Việc" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="taxtCode" class="col-sm-3 control-label">Fax</label>
+        <div class="col-sm-9">
+          <input formControlName="taxtCode" name="taxtCode" [(ngModel)]="account.taxtCode" type="text" id="taxtCode" placeholder="Fax" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="link" class="col-sm-3 control-label">Link</label>
+        <div class="col-sm-9">
+          <input formControlName="link" name="link" [(ngModel)]="account.link" type="text" id="link" placeholder="Link" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="nameContact" class="col-sm-3 control-label">Tên Liên Hệ</label>
+        <div class="col-sm-9">
+          <input formControlName="nameContact" name="nameContact" [(ngModel)]="account.nameContact" type="text" id="nameContact" placeholder="Tên Liên Hệ" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="sex" class="col-sm-3 control-label">Giới Tính</label>
+        <div class="col-sm-9">
+          <select class="form-select" aria-label="Default select example" [(ngModel)]="account.sex" formControlName="sex" name="sex" type="text" id="sex">
+            <option value=0>Nam</option>
+            <option value=1>Nữ</option>
+          </select>
+          <!--          <div *ngIf="!contactForm.controls.roleID?.valid && (contactForm.controls.roleID?.dirty) || contactForm.controls.roleID?.touched" >-->
+          <!--            <span style="color:red">Vui Lòng Chọn Nhóm Role</span>-->
+          <!--          </div>-->
+        </div>
+        <!--          <input formControlName="roleID" name="roleID" type="text" id="roleID" placeholder="Role ID" class="form-control">-->
+      </div>
+      <div class="form-group">
+        <label id="status" class="col-sm-3 control-label">Trạng Thái</label>
+        <div class="col-sm-9">
+          <label class="switch">
+            <input type="checkbox" name="status" formControlName="status" [(ngModel)]="account.status">
+            <span class="slider round"></span>
+          </label><td>
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <button [disabled]="!contactForm.valid"  type="submit" class="btn btn-primary btn-block">Thêm mới</button>
+      </div>
+
+    </form> <!-- /form -->
+    <footer class="sticky-footer bg-white">
+      <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+          <span>Copyright &copy; Your Website 2020</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>

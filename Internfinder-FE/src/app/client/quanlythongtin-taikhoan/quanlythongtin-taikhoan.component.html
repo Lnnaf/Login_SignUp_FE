@@ -1,0 +1,69 @@
+<h2 style="text-align: center">Thông Tin Tài Khoản Sinh Viên</h2>
+<div class="row" >
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="userName">Họ và tên</label>
+      <input  [(ngModel)]="account.fullName" name="userName" type="text" id="userName" placeholder="Tên Đăng Nhập" class="form-control" autofocus>
+    </div>
+    <div class="form-group">
+      <label for="userName">Mật Khẩu</label>
+      <input  [(ngModel)]="account.passWord" name="userName" type="password" id="passWord" class="form-control" autofocus>
+    </div>
+    <div class="form-group">
+      <label for="userName">Email</label>
+      <input  [(ngModel)]="account.email" name="userName" type="email" id="email" placeholder="Email" class="form-control" autofocus>
+    </div>
+    <div class="form-group">
+      <label for="userName">Sinh Nhật</label>
+      <input  [(ngModel)]="account.brithday" name="userName" type="text" id="brithday" placeholder="Tên Đăng Nhập" class="form-control" autofocus>
+    </div>
+    <div class="form-group">
+      <label for="userName">Địa Chỉ</label>
+      <input  [(ngModel)]="account.address" name="userName" type="text" id="address"  class="form-control" autofocus>
+    </div>
+    <div class="form-group">
+      <label for="roleID" class="col-sm-3 control-label">Giới Tính</label>
+      <div class="col-sm-9">
+        <select class="form-select" aria-label="Default select example" [(ngModel)]="account.sex"   type="text" id="roleID">
+          <option value=0>Nam </option>
+          <option value=1>Nữ</option>>
+        </select></div>
+    <div class="form-group">
+      <label for="userName">Số Điện Thoại</label>
+      <input  [(ngModel)]="account.phone" name="userName" type="text" id="phone" class="form-control" autofocus>
+    </div>
+    <div class="form-group">
+      <label for="userName">Nơi Làm Việc</label>
+      <input  [(ngModel)]="account.compyName" name="userName" type="text" id="compyName"  class="form-control" autofocus>
+    </div>
+      <div class="form-group">
+        <label for="userName">Fax</label>
+        <input  [(ngModel)]="account.taxtCode" name="userName" type="text" id="taxtCode"  class="form-control" autofocus>
+      </div>
+      <div class="form-group">
+        <label for="userName">Link</label>
+        <input  [(ngModel)]="account.link" name="userName" type="text" id="link"  class="form-control" autofocus>
+      </div>
+      <div class="form-group">
+        <label for="userName">Tên Liên Hệ</label>
+        <input  [(ngModel)]="account.nameContact" name="userName" type="text" id="nameContact"  class="form-control" autofocus>
+      </div>
+    <button type="button" class="btn btn-success">Lưu</button>
+    <button type="button" class="btn btn-danger">Xóa Tài Khoản</button>
+  </div>
+</div>
+  <div class="col-sm-3">
+    <div class="icon-bar">
+      <img src="assets/admin/img/me.jpg" class="img-thumbnail">
+    </div>
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroupFileAddon01">Thay Đổi</span>
+    </div>
+    <div class="custom-file">
+      <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+      <label class="custom-file-label" for="inputGroupFile01">Chọn tệp</label>
+    </div>
+  </div>
+</div>
+<br>

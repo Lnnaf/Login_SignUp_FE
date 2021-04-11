@@ -1,0 +1,94 @@
+#template-list{
+    width: 100%;
+    margin: 20px auto;
+}
+#template-list .row .template_cv{
+    padding: 0 7px;
+}
+.template-cv-item{
+    background-color: #fff;
+    height: 380px;
+    border-radius: 5px;
+    margin-bottom: 26px;
+    text-align: left;
+    width: 80%;
+    overflow:hidden;
+}
+.box-shadow{
+    -webkit-box-shadow: 2px 2px 10px 1px;
+    box-shadow: 2px 2px 10px 1px;
+}
+#template-list .cv-img{
+    position: relative;
+    box-shadow: 0px 2px 2px ;
+    border-radius: 1px;
+    -webkit-border-radius: 1px;
+}
+#template-list .cv-img img{
+    width: 100%;
+    height: 250px;
+    cursor: pointer;
+}
+#template-list .template-cv-title a{
+    color: #555;
+    text-decoration:none;
+}
+#template-list .template-cv-title a:hover{
+    text-decoration: underline;
+    color: #00b14f;
+}
+
+.img-responsive{
+    max-width: 100%;
+    display: inline-block;
+}
+img{vertical-align: middle}
+.template-cv-item-info{
+    padding: 16px;
+}
+.template-cv-title{
+    font-size: 15px;
+    font-weight: 700;
+    color: #333;
+    margin-top: 12px;
+    height: 50px;
+    text-align: center;
+}
+.edit-delete-template{
+    border-radius: 16px;
+    padding: 4px 8px;
+    background-color: #00b14f;
+    position: absolute;
+    z-index: 100;
+    top: 10px;
+    right: 34px;
+    color: #fff;
+}
+.delete-template{
+    border-radius: 16px;
+    padding: 4px 8px;
+    background-color: #e02d1b;
+    position: absolute;
+    z-index: 100;
+    top: 10px;
+    right: 5px;
+    color: #fff;
+}
+.font-color-control{
+    font-family: "Roboto Light";
+    font-size: 16px;
+    color: #3d3e47;
+    font-style: italic;
+    font-weight: bold;
+}
+.template-cv-item-chitiet{
+    background-color: #f5f5f5 ;
+    height: 300px;
+    border-radius: 5px;
+    width: 70%;
+    text-align: left;
+    overflow: hidden;
+    margin-left: 30px;
+}
+
+

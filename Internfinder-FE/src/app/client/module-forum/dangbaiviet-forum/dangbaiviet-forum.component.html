@@ -1,0 +1,29 @@
+<html>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng bài chia sẻ</title>
+  <link rel="stylesheet" href="/assets/Client/forum-mockup-master/css/style.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="container">
+  <div class="col-full push-top">
+    <ul class="breadcrumbs">
+      <li><a href="/forum"><i class="fa fa-home fa-btn"></i>Trang chủ</a></li>
+      <li><a href="/forum">Chủ đề</a></li>
+    </ul>
+  </div>
+  <div class="col-full push-top">
+    <textarea name="title" id="title" placeholder="nhập vào tiêu đề bài đăng" style="width: 100%; max-width: 1170px; max-height: 50px;
+    height: 50px;
+    margin-bottom: 20px;"></textarea>
+    <ckeditor [(ngModel)]="model.editorData"></ckeditor>
+    <button class="btn-green btn-small"> Đăng bài</button>
+  </div>
+</div>
+</body>
+</html>
